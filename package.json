@@ -1,0 +1,43 @@
+{
+  "name": "agent-context-tiering",
+  "version": "0.1.0",
+  "description": "Tiered context assembly and pre-flight token budgeting for multi-agent systems. Load the cheapest context that still does the job.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc",
+    "test": "tsc -p tsconfig.test.json && node --test .tmp-test/test/*.test.js",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.test.json --noEmit"
+  },
+  "keywords": [
+    "agents",
+    "multi-agent",
+    "llm",
+    "context",
+    "token-budget",
+    "mcp",
+    "prompt-engineering",
+    "context-window"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0"
+  }
+}
